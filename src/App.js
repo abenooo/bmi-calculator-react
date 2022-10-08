@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./index.css";
-function App() {
+export default function App() {
   // state
   const [weight, setWeight] = useState(0);
   const [height, setHeight] = useState(0);
   const [bmi, setBmi] = useState("");
   const [message, setMessage] = useState("");
 
-  const imgSrc = "";
+  
   // reload the browser when the user want to clean the form
 
   let calcBmi = (event) => {
@@ -33,7 +33,21 @@ function App() {
       }
     }
   }
+  //  show image based on bmi calculation
+  let imgSrc;
 
+  if (bmi < 1) {
+    imgSrc = null
+  } else {
+    if(bmi < 25) {
+      imgSrc = require('../src/assets/underweight.png')
+    } else if (bmi >= 25 && bmi < 30) {
+      imgSrc = require('../src/assets/healthy.png')
+    } else {
+      imgSrc = require('../src/assets/overweight.png')
+    }
+  }
+  
   let reload = () => {
     window.location.reload();
   };
@@ -76,4 +90,3 @@ function App() {
   );
 };
 
-export default App;
