@@ -24,9 +24,9 @@ export default function App() {
 
       // Logic for message
 
-      if (bmi < 25) {
+      if (bmi < 18.5) {
         setMessage('You are underweight')
-      } else if (bmi >= 25 && bmi < 30) {
+      } else if (bmi >= 18.5 && bmi < 24.9) { 
         setMessage('You are a healthy weight')
       } else {
         setMessage('You are overweight')
