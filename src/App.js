@@ -57,11 +57,11 @@ export default function App() {
         <h2 className="center">BMI Calculator</h2>
         <form onSubmit={calcBmi}>
           <div>
-            <label>Weight (lbs)</label>
+            <label>Weight (Kg)</label>
             <input value={weight} onChange={(e) => setWeight(e.target.value)} />
           </div>
           <div>
-            <label>Height (in)</label>
+            <label>Height (cm)</label>
             <input
               value={height}
               onChange={(event) => setHeight(event.target.value)}
