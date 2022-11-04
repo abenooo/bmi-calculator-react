@@ -28,6 +28,9 @@ export default function App() {
         setMessage('You are underweight')
       } else if (bmi >= 18.5 && bmi < 24.9) { 
         setMessage('You are a healthy weight')
+      }
+      else if (bmi >= 30) { 
+        setMessage('You are have Obesity ')
       } else {
         setMessage('You are overweight')
       }
@@ -43,7 +46,11 @@ export default function App() {
       imgSrc = require('../src/assets/underweight.png')
     } else if (bmi >= 25 && bmi < 30) {
       imgSrc = require('../src/assets/healthy.png')
-    } else {
+    } 
+     else if (bmi >= 30) {
+      imgSrc = require('../src/assets/overweight.png')
+    }
+    else {
       imgSrc = require('../src/assets/overweight.png')
     }
   }
